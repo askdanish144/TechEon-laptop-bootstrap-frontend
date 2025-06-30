@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechEon - We Innovate Technology</title>
+    <link rel="shortcut icon" href="/Images/FavIcon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .icon-grid-color i {
+            color: #0070fc;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Getting images from: https://picsum.photos  -->
+    <header>
+        <nav class="navbar text-light navbar-expand-lg border-bottom border-body p-3" data-bs-theme="light">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">TechEon.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#contact" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 text-bg-light " type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                    <!-- Buttons to trigger modal -->
+                    <button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal"
+                        data-bs-target="#login">Login</button>
+                    <button type="button" class="btn btn-primary ms-1" data-bs-toggle="modal"
+                        data-bs-target="#signup">SignUp</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal -->
+        <div class="MyModals">
+
+            <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <!-- <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72"
+                                    height="57"> -->
+                                <h1 class="h3 mb-3 fw-normal text-center my-2">Please LogIn</h1>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating mt-2">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <div class="form-check text-start my-3">
+                                    <input class="form-check-input" type="checkbox" value="remember-me"
+                                        id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                                <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <h1 class="h3 mb-3 fw-normal text-center my-2">SignUp</h1>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating mt-2">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <div class="form-floating mt-2">
+                                    <input type="password" class="form-control" id="confirmfloatingPassword"
+                                        placeholder="Confirm password">
+                                    <label for="confirmfloatingPassword">Confirm Password</label>
+                                </div>
+
+                                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+
+                                <div class="form-check text-start my-3">
+                                    <input class="form-check-input" type="checkbox"
+                                        value="I-agree-to-all-the-terms-and-conditions" id="flexCheckDefaultTerms">
+                                    <label class="form-check-label" for="flexCheckDefaultTerms">I agree to all the terms
+                                        and conditions</label>
+                                </div>
+
+                                <hr class="my-4">
+                                <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                    <svg class="bi me-1" width="16" height="16">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                    Sign up with Facebook
+                                </button>
+                                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                    <svg class="bi me-1" width="16" height="16">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                    Sign up with Twitter
+                                </button>
+                                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                    <svg class="bi me-1" width="16" height="16">
+                                        <use xlink:href="#github"></use>
+                                    </svg>
+                                    Sign up with GitHub
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="container my-3">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Your Name" autocomplete="off">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com" autocomplete="off">
+                                    </div>
+                                    
+                                    <label class="form-label">Subject</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="Login Issues">Login Issues</option>
+                                        <option value="Payment Problems">Payment Problems</option>
+                                        <option value="Account Settings">Account Settings</option>
+                                        <option value="Website Functionality">Website Functionality</option>
+                                        <option value="Subscription Issues">Subscription Issues</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+
+                                    <div class="mb-3 mt-3">
+                                        <label for="exampleFormControlTextarea1" class=" form-label">Eleborate Your
+                                            Concern</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Are you a Member</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Carousel  -->
+        <div id="myCarousel" class="carousel slide carousel-fade mb-6 pointer-event" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                    class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                    class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Images/Carousal/Blue_keyboard.jpg" class="d-block w-100" alt="img" height="400"
+                        style="object-fit: cover; object-position: center;">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Welcome To TechEon.</h1>
+                            <p class="opacity-75">Technology, Development and Trends</p>
+                            <p><a class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#signup"
+                                    href="#">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/Carousal/blue_keyboard_2.jpg" class="d-block w-100" alt="img" height="400"
+                        style="object-fit: cover; object-position: center;">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Innovation Drives Growth</h1>
+                            <p>Dream, Plan, Execute</p>
+                            <p><a class="btn btn-md btn-primary" target="_blank"
+                                    href="https://www.linkedin.com/pulse/innovation-key-driving-business-growth-todays-economy-lahna-mba/">Learn
+                                    more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/Carousal/Blue_Keyboard_3.jpg" class="d-block w-100" alt="img" height="400"
+                        style="object-fit: cover; object-position: center;">
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Marketing and Innovation</h1>
+                            <p>Strategy, Message, Rise</p>
+                            <p><a class="btn btn-md btn-primary" target="_blank"
+                                    href="https://sciencedirect.com/science/article/pii/S2199853122001901">Browse</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Features -->
+        <div class="container px-4">
+            <!-- <h2 class="pb-2 border-bottom">Features It Packs</h2> -->
+
+            <div class="row row-cols-1 row-cols-lg-2 align-items-md-center g-5 pb-2 mt-3">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Advanced Features of the QuantumX Laptop</h2>
+                    <p class="text-body-secondary">
+                        The QuantumX Laptop is engineered for performance, combining cutting-edge technology with sleek
+                        design to deliver an unparalleled user experience.</p>
+                    <a href="https://www.msi.com/Laptops" class="btn btn-primary btn-lg" target="_blank">See More</a>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="text-bg-primary rounded-3 p-2 mb-1" style="width: fit-content;">
+                                <i class="fa-solid fa-display fa-xl"></i>
+                            </div>
+                            <h4 class=" fw-semibold mb-0 text-body-emphasis"> Ultra-Responsive Display</h4>
+                            <p class="text-body-secondary">With 4K Ultra HD display with 120Hz refresh rate, delivering
+                                stunning visuals and fluid motion for all your tasks
+                            </p>
+                        </div>
+
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="text-bg-primary rounded-3 p-2 mb-1" style="width: fit-content;">
+                                <i class="fa-solid fa-microchip fa-xl"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis"> Powerful Performance</h4>
+                            <p class="text-body-secondary">Powered by an Intel Core i9 processor and 32GB of DDR5
+                                RAM, it effortlessly handles demanding applications and multitasking</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="text-bg-primary rounded-3 p-2 mb-1" style="width: fit-content;">
+                                <i class="fa-solid fa-fan fa-xl"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Advanced Cooling System</h4>
+                            <p class="text-body-secondary">The laptop features liquid cooling technology, ensuring
+                                it remains cool even during heavy use</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="text-bg-primary rounded-3 p-2 mb-1" style="width: fit-content;">
+                                <i class="fa-solid fa-battery-full fa-xl"></i>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Extended Battery Life</h4>
+                            <p class="text-body-secondary"> With up to 15 hours of battery life, the QuantumX
+                                provides long-lasting power for work and play</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- images  -->
+        <div class="container">
+            <div class="container px-4 py-2" id="custom-cards">
+                <h2 class="pb-2 border-bottom"></h2>
+
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url(https://images.pexels.com/photos/19012034/pexels-photo-19012034/free-photo-of-gaming-laptops-on-a-desk-in-purple-lighting.jpeg?auto=compress&cs=tinysrgb&w=600); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Top Graphics and Speed</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+
+                                    <li>
+                                        <h3>TechEon.</h3>
+                                    </li>
+                                    <li class="me-auto" style="visibility: hidden;">
+                                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                            class="rounded-circle border border-white">
+                                    </li>
+
+                                    <!-- <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg>
+                                        <small>Earth</small>
+                                    </li> -->
+
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg>
+                                        <small>3d</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url(https://images.unsplash.com/photo-1640695254597-7ee90eed00fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdhbWluZyUyMGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Elite Gaming Headphone</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+
+                                    <li>
+                                        <h3>TechEon.</h3>
+                                    </li>
+                                    <li class="me-auto" style="visibility: hidden;">
+                                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                            class="rounded-circle border border-white">
+                                    </li>
+
+                                    <!-- <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg>
+                                        <small>Earth</small>
+                                    </li> -->
+
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg>
+                                        <small>3d</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                            style="background-image: url(https://images.unsplash.com/photo-1640695257754-7e2932f9ad0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtaW5nJTIwbGFwdG9wfGVufDB8MHwwfHx8MA%3D%3D);  background-repeat: no-repeat; background-size: cover; background-position: center;">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Immersive Gaming Space Design</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+
+                                    <li>
+                                        <h3>TechEon.</h3>
+                                    </li>
+                                    <li class="me-auto" style="visibility: hidden;">
+                                        <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                            class="rounded-circle border border-white">
+                                    </li>
+
+                                    <!-- <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#geo-fill"></use>
+                                        </svg>
+                                        <small>Earth</small>
+                                    </li> -->
+
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em" height="1em">
+                                            <use xlink:href="#calendar3"></use>
+                                        </svg>
+                                        <small>3d</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Headings, text and images -->
+        <div class="container">
+            <hr class="featurette-divider">
+
+            <div class="row featurette my-5 d-flex align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">High-Performance Gaming Laptops for Every Gamer</h2>
+                    <p class="lead my-2">Gaming laptops have evolved to offer desktop-like performance in a portable
+                        form factor. Equipped with the latest processors, high-end GPUs, and fast refresh rate displays,
+                        these laptops deliver the power needed for the most demanding games</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://t3.ftcdn.net/jpg/06/28/06/20/240_F_628062031_JfPJNvjOASTUBiXdOVekeQB53YIe3KHu.jpg"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" style="border-radius: 1rem;">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette my-5 d-flex align-items-center justify-content-center">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Cutting-Edge Graphics and Immersive Displays</h2>
+                    <p class="lead my-2">The visual experience is crucial in gaming, and modern gaming laptops excel in
+                        this area. With cutting-edge graphics cards like NVIDIA RTX and high-resolution displays, these
+                        laptops provide stunning visuals and smooth gameplay.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="./Images/Colorful.jpg"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" style="border-radius: 1rem;">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette my-5 d-flex align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Portable Powerhouses with Advanced Cooling</h2>
+                    <p class="lead my-2">Gaming laptops are not just about raw power; they also incorporate advanced
+                        cooling systems to maintain performance during extended gaming sessions. This ensures that your
+                        laptop can run at peak performance, even during intense gaming marathons, all while remaining
+                        portable enough to take anywhere</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://img.freepik.com/free-photo/hard-drive-with-blue-light-laptop-arrangement_23-2149417020.jpg?size=626&ext=jpg&uid=R106235558&ga=GA1.1.1235546558.1711340542&semt=ais_hybrid"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" style="border-radius: 1rem;">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- services grid -->
+        <div class="container px-4 py-1 icon-grid-color" id="icon-grid">
+            <h2 class="pb-2 border-bottom"></h2>
+
+            <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 py-4"> -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-5 py-4">
+                <div class="col align-items-start">
+                    <div class="me-3 mb-3">
+                        <i class="fas fa-shipping-fast fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Home Delivery</h3>
+                        <p class="mt-1">Enjoy the convenience of having your orders delivered straight to your door</p>
+                    </div>
+                </div>
+                <div class="col align-items-start">
+                    <div class="me-3 mb-3">
+                        <i class="fa-solid fa-wallet fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Cash on Delivery</h3>
+                        <p class="mt-1">Pay for your order only when it arrives with our Cash on Delivery option</p>
+                    </div>
+                </div>
+                <div class="col align-items-start">
+                    <div class="me-3 mb-3">
+                        <i class="fa-solid fa-money-check-dollar fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Flexible Payment</h3>
+                        <p class="mt-1">Choose from various payment methods for a smooth checkout experience</p>
+                    </div>
+                </div>
+                <div class="col align-items-start">
+                    <div class="me-3 mb-3">
+                        <i class="fa-solid fa-people-arrows fa-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Real-Time Tracking</h3>
+                        <p class="mt-1">Keep track of your order's journey with real-time updates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"> <a href="#" class="nav-link px-2 text-body-secondary">Home</a> </li>
+                <li class="nav-item"> <a href="./about.html" class="nav-link px-2 text-body-secondary">About</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link px-2 text-body-secondary" data-bs-toggle="modal" data-bs-target="#contact">Contact</a>
+                </li>
+                <li class="nav-item"> <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link px-2 text-body-secondary">Features</a> </li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 TechEon, All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
