@@ -37,7 +37,7 @@ Clone the repo:
 
 ## ✨ Author
 
-Crafted with attention to detail by **Danish – Full Stack Developer & Graphic Designer**
+Crafted with attention to detail by **Danish Ali– Full Stack Developer & Graphic Designer**
 
 GitHub: https://github.com/askdanish144
 
