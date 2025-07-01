@@ -32,7 +32,7 @@ This template is ideal for:
 
 This project is intended solely for portfolio and demonstration purposes.
 
-1. Clone the repo:
+Clone the repo:
    git clone https://github.com/askdanish144/TechEon-laptop-bootstrap-frontend.git
 
 ## ✨ Author
