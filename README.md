@@ -5,7 +5,7 @@ A sleek, responsive website UI for **QuantumX**, a high-performance laptop brand
 ![QuantumX Screenshot](./Screenshot.png)
 
 ## 🚀 Live Demo
-👉 [Click here to view the site](https://askdanish144.github.io/TechEon-laptop-bootstrap-frontend/)
+👉 [Click here to view the site](https://techeon-site.netlify.app/)
 
 ## 📌 Features
 
