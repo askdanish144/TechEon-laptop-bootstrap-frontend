@@ -1,8 +1,8 @@
-# QuantumX Laptop - Responsive Bootstrap Frontend
+# TechEon - Responsive Bootstrap Frontend
 
 A sleek, responsive website UI for **QuantumX**, a high-performance laptop brand. Built with HTML, CSS, and Bootstrap 5, this frontend project highlights product features, modern UI design, and responsive layout tailored for tech product promotion.
 
-![QuantumX Screenshot](./Screenshot.png)
+![TechEon Screenshot](./Screenshot.png)
 
 ## 🚀 Live Demo
 👉 [Click here to view the site](https://techeon-site.netlify.app/)
